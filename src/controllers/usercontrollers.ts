@@ -9,6 +9,16 @@ export const deleteUser = (req: Request, res: Response) => {
     res.json({ message: "User deleted" });
 }
 
+export const createUser = async (req: Request, res: Response) => {
+    const newUser = await userRepository.create({
+        name : req.body.name,
+        email : req.body.email,
+        password : req.body.password
+    });
+
+    await userRepository.save(newUser);
+    res.json ({message: "User Created", user : JSON.stringify(req.body)});
+}
 // GET ALL USERS
 export const getAllUsers = async (req: Request, res: Response) => {
     const users = await userRepository.find();
