@@ -48,7 +48,7 @@ FOR GET BY ID API
 FOR CREATE 
 1. Input "http://localhost:3000/users" in the bar
 2. In the body tab, pick JSON format, this might differ depending on the HTTP Request App
-3. Add an object with name,email,password (e.g {"name" : "Ivan", "email" : "Ivan@gmail.com", "password" : "Ivan123"})
+3. Add an object with name,email,password (e.g {"name" : "Peter", "email" : "tech13@gmail.com", "password" : "tech13"})
 4. ENSURE the request type is POST
 5. Send Request
 
